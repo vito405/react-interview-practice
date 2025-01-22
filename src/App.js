@@ -13,6 +13,7 @@ import menus from './components/tree/data';
 import TabTest from './components/tabs/tab-test';
 import ModalTest from './components/custom-module/modal-test';
 import GitHubFinder from './components/githubfinder';
+import SearchAutoComplete from './components/autocom';
 
 
 function App() {
@@ -28,8 +29,9 @@ function App() {
       <LightDarkMode />
       <Scroll url={'https://dummyjson.com/products?limit=100'}/>
        <TabTest /> 
-       <ModalTest /> */}
-       <GitHubFinder />
+       <ModalTest /> 
+       <GitHubFinder /> */}
+       <SearchAutoComplete />
     </div>
   );
 }

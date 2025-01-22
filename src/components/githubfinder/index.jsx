@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-
-
+import User from './user'
+import './gitnub.css'
 
 export default function GitHubFinder() {
     const [userName, setUserName] = useState('vito405')
@@ -10,24 +10,26 @@ export default function GitHubFinder() {
     async function fetchGithubUserData() {
         setLoading(true)
         const res = await fetch(`https://api.github.com/users/${userName}`)
-        
+
 
         const data = await res.json();
-        if(data){
+        if (data) {
             setUserData(data)
             setLoading(false)
+            setUserName('')
         }
-        console.log(data);
-        
+
     }
 
-    function handleSubmit() { }
+    function handleSubmit() {
+        fetchGithubUserData()
+    }
 
     useEffect(() => {
         fetchGithubUserData()
     }, [])
 
-    if(loading){
+    if (loading) {
         return <h1>Loading Data ! Please wait</h1>
     }
 
@@ -36,11 +38,14 @@ export default function GitHubFinder() {
             <input
                 name="search-by-username"
                 type="text"
-                placeholder="Search gibhib Username.."
+                placeholder="Search github Username.."
                 value={userName}
                 onChange={(event) => setUserName(event.target.value)}
             />
             <button onClick={handleSubmit}>Search</button>
         </div>
+        {
+            userData !== null ? <User user={userData} /> : null
+        }
     </div>
 }
