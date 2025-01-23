@@ -17,12 +17,14 @@ import SearchAutoComplete from './components/autocom';
 import TicTacToe from './components/tiktac';
 import FeatureFlagGlobalState from './components/feature-flag/context/feature-flag';
 import FeatureFlags from './components/feature-flag';
+import UseFetchHookTest from './components/useFetch/test';
+import UseOnClickOutsideTest from './components/use-outside-click/test';
 
 
 function App() {
   return (
     <div className='App'>
-       {/* <Accordian />
+      {/* <Accordian />
       <RandomColor/>
       <StarRating />
       <Slider url={'https://picsum.photos/v2/list'} page={'1'} limit={'10'} />
@@ -35,10 +37,12 @@ function App() {
        <ModalTest /> 
        <GitHubFinder /> 
        <SearchAutoComplete /> 
-       <TicTacToe /> */}
+       <TicTacToe /> 
        <FeatureFlagGlobalState>
         <FeatureFlags />
-       </FeatureFlagGlobalState>
+       </FeatureFlagGlobalState> 
+        <UseFetchHookTest />  */}
+      <UseOnClickOutsideTest />
     </div>
   );
 }
