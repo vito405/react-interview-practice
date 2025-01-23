@@ -14,12 +14,15 @@ import TabTest from './components/tabs/tab-test';
 import ModalTest from './components/custom-module/modal-test';
 import GitHubFinder from './components/githubfinder';
 import SearchAutoComplete from './components/autocom';
+import TicTacToe from './components/tiktac';
+import FeatureFlagGlobalState from './components/feature-flag/context/feature-flag';
+import FeatureFlags from './components/feature-flag';
 
 
 function App() {
   return (
     <div className='App'>
-        {/* <Accordian />
+       {/* <Accordian />
       <RandomColor/>
       <StarRating />
       <Slider url={'https://picsum.photos/v2/list'} page={'1'} limit={'10'} />
@@ -30,8 +33,12 @@ function App() {
       <Scroll url={'https://dummyjson.com/products?limit=100'}/>
        <TabTest /> 
        <ModalTest /> 
-       <GitHubFinder /> */}
-       <SearchAutoComplete />
+       <GitHubFinder /> 
+       <SearchAutoComplete /> 
+       <TicTacToe /> */}
+       <FeatureFlagGlobalState>
+        <FeatureFlags />
+       </FeatureFlagGlobalState>
     </div>
   );
 }

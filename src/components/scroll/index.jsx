@@ -33,12 +33,7 @@ export default function Scroll({ url }) {
     }, [url])
 
     function handleScroll() {
-        console.log(
-            document.body.scrollTop,
-            document.documentElement.scrollTop,
-            document.documentElement.scrollHeight,
-            document.documentElement.clientHeight
-        );
+        
 
         const howMuchScrolled =
             document.body.scrollTop
@@ -60,7 +55,7 @@ export default function Scroll({ url }) {
             window.removeEventListener('scroll', () => { })
         }
     }, [])
-    console.log(data, scrollPer);
+    
 
     if(errorMsg){
         return <div>Error ! {errorMsg}</div>
